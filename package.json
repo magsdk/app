@@ -16,7 +16,8 @@
         "jsdoc": "jsdoc --destination doc *.js readme.md"
     },
     "dependencies": {
-        "stb-app": "stbsdk/app"
+        "stb-app": "stbsdk/app",
+        "spa-app": "spasdk/app"
     },
     "devDependencies": {
         "mag-eslint-config": "magsdk/eslint-config"

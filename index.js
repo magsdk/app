@@ -8,16 +8,31 @@
 'use strict';
 
 var app    = require('./lib/core'),
-    events = require('stb-app/lib/events');
+    events = require('spa-app/lib/events');
 
 
-// new way of string handling
-// all strings are in UTF-16
-// since stbapp 2.18
-if ( window.gSTB && gSTB.SetNativeStringMode ) {
-    /* eslint new-cap: 0 */
-    gSTB.SetNativeStringMode(true);
-}
+/**
+ * Show app.
+ */
+app.ready = function () {
+    // if ( this.events['show'] ) {
+    //     this.emit('show');
+    // }
+
+    window.core.call('app:ready');
+};
+
+
+events.load = function ( event ) {
+    window.core = window.parent.getCoreInstanse(window, app);
+
+    core.once('load', function () {
+        if ( app.events[event.type] ) {
+            // notify listeners
+            app.emit(event.type, event);
+        }
+    });
+};
 
 
 // activate development mechanisms and tools
@@ -32,6 +47,14 @@ if ( DEVELOP ) {
 //     window.addEventListener(name, events[name]);
 // });
 
+
+// new way of string handling
+// all strings are in UTF-16
+// since stbapp 2.18
+// if ( window.gSTB && gSTB.SetNativeStringMode ) {
+//     /* eslint new-cap: 0 */
+//     gSTB.SetNativeStringMode(true);
+// }
 
 // public
 module.exports = app;
