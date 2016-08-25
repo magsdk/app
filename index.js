@@ -10,6 +10,7 @@
 var app    = require('./lib/core'),
     events = require('spa-app/lib/events');
 
+app.gettext = require('spa-gettext');
 
 /**
  * Show app.
@@ -42,10 +43,10 @@ if ( DEVELOP ) {
 }
 
 
-// apply DOM events
-// Object.keys(events).forEach(function ( name ) {
-//     window.addEventListener(name, events[name]);
-// });
+//apply DOM events
+Object.keys(events).forEach(function ( name ) {
+    window.addEventListener(name, events[name]);
+});
 
 
 // new way of string handling
