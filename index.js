@@ -12,6 +12,7 @@ var app    = require('./lib/core'),
 
 app.gettext = require('spa-gettext');
 
+
 /**
  * Show app.
  */

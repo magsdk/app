@@ -6,7 +6,8 @@ html, body {
     font-family: Ubuntu, sans-serif;
     overflow: hidden;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    color: #fff; }
 
 table {
     border: 0;
