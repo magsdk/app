@@ -11,6 +11,10 @@ var app    = require('spa-app/lib/core'),
     events = require('spa-app/lib/events');
 
 
+// get instance
+window.core = window.parent.getCoreInstance(window, app);
+
+
 // apply geometry
 require('stb-app/lib/metrics');
 
@@ -19,10 +23,6 @@ require('./lib/css');
 
 // load app css
 require('spa-app/lib/css');
-
-
-// get instance
-window.core = window.parent.getCoreInstance(window, app);
 
 
 app.gettext = require('spa-gettext');
