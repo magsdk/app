@@ -12,7 +12,7 @@ var app    = require('spa-app/lib/core'),
 
 
 // apply geometry
-require('spa-app/lib/metrics');
+require('stb-app/lib/metrics');
 
 // load theme css
 require('./lib/css');
