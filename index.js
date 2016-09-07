@@ -7,8 +7,23 @@
 
 'use strict';
 
-var app    = require('./lib/core'),
+var app    = require('spa-app/lib/core'),
     events = require('spa-app/lib/events');
+
+
+// apply geometry
+require('spa-app/lib/metrics');
+
+// load theme css
+require('./lib/css');
+
+// load app css
+require('spa-app/lib/css');
+
+
+// get instance
+window.core = window.parent.getCoreInstance(window, app);
+
 
 app.gettext = require('spa-gettext');
 
