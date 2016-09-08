@@ -22,10 +22,7 @@ require('stb-app/lib/metrics');
 require('./lib/css');
 
 // load app css
-require('spa-app/lib/css');
-
-
-app.gettext = require('spa-gettext');
+require('stb-app/lib/css');
 
 
 /**
