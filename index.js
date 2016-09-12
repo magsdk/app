@@ -46,9 +46,9 @@ app.ready = function () {
  * @param [callback] provide callback if u want to handle exit result, or cancel it
  */
 app.exit = function ( callback ) {
-    var ModalMessage = require('magsdk/component-modal'),
-        LayoutList   = require('magsdk/component-layout-list'),
-        rc           = require('stbsdk/rc'),
+    var ModalMessage = require('mag-component-modal'),
+        LayoutList   = require('mag-component-layout-list'),
+        rc           = require('stb-rc'),
         previousFocus = app.activePage.activeComponent,
         exitModal;
 
