@@ -14,6 +14,8 @@ var app    = require('spa-app/lib/core'),
 // get instance
 window.core = window.parent.getCoreInstance(window, app);
 
+// shims
+require('stb-shim-classlist');
 
 // apply geometry
 require('stb-app/lib/metrics');
