@@ -8,7 +8,8 @@
 'use strict';
 
 var app    = require('spa-app/lib/core'),
-    events = require('spa-app/lib/events');
+    events = require('spa-app/lib/events'),
+    keys   = require('stb-keys');
 
 
 // get instance
@@ -48,9 +49,8 @@ app.ready = function () {
  * @param [callback] provide callback if u want to handle exit result, or cancel it
  */
 app.exit = function ( callback ) {
-    var ModalMessage = require('mag-component-modal'),
-        LayoutList   = require('mag-component-layout-list'),
-        rc           = require('stb-rc'),
+    var ModalMessage  = require('mag-component-modal'),
+        LayoutList    = require('mag-component-layout-list'),
         previousFocus = app.activePage.activeComponent,
         exitModal;
 
@@ -110,7 +110,7 @@ app.exit = function ( callback ) {
                 events: {
                     keydown: function ( event ) {
                         LayoutList.prototype.defaultEvents.keydown.call(this, event);
-                        if ( event.keyCode === rc.codes.back ) {
+                        if ( event.code === keys.back ) {
                             event.stop = true;
                             if ( typeof callback === 'function' ) {
                                 callback(false);
