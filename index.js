@@ -21,11 +21,14 @@ require('stb-shim-classlist');
 // apply geometry
 require('stb-app/lib/metrics');
 
+// load sdk css
+require('stb-app/lib/css')('sdk');
+
 // load theme css
 require('./lib/css');
 
 // load app css
-require('stb-app/lib/css');
+require('stb-app/lib/css')('app');
 
 
 /**
