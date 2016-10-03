@@ -48,87 +48,13 @@ app.ready = function () {
  * If callback function provided, and callback returns boolean 'true', application will stay alive.
  *
  * @fires module:/stb/app#exit
- *
- * @param [callback] provide callback if u want to handle exit result, or cancel it
  */
-app.exit = function ( callback ) {
-    var ModalMessage  = require('mag-component-modal'),
-        LayoutList    = require('mag-component-layout-list'),
-        previousFocus = app.activePage.activeComponent,
-        exitModal;
+app.exit = function () {
+    if ( app.events['exit'] ) {
+        app.emit('exit');
+    }
 
-    app.activePage.add(exitModal = new ModalMessage({
-        title: _('Exit'),
-        events:{
-            show: function () {
-                this.children[0].focus();
-            },
-            hide: function () {
-                previousFocus.focus();
-            }
-        },
-        children:[
-            new LayoutList({
-                size:2,
-                focusIndex:0,
-                data:[
-                    {
-                        items: [
-                            {
-                                value: _('Exit')
-                            }
-                        ],
-                        click: function () {
-                            if ( typeof callback === 'function' ) {
-                                if ( callback(true) ) {
-                                    exitModal.hide();
-                                    exitModal.remove();
-                                    return;
-                                }
-                            }
-                            if ( app.events['exit'] ) {
-                                app.emit('exit');
-                            }
-
-                            exitModal.hide();
-                            exitModal.remove();
-                            core.call('exit');
-                        }
-                    },
-                    {
-                        items: [
-                            {
-                                value: _('Cancel')
-                            }
-                        ],
-                        click: function () {
-                            if ( typeof callback === 'function' ) {
-                                callback(false);
-                            }
-                            exitModal.hide();
-                            exitModal.remove();
-                        }
-                    }
-                ],
-                events: {
-                    keydown: function ( event ) {
-                        LayoutList.prototype.defaultEvents.keydown.call(this, event);
-                        if ( event.code === keys.back ) {
-                            event.stop = true;
-                            if ( typeof callback === 'function' ) {
-                                callback(false);
-                            }
-                            exitModal.hide();
-                            exitModal.remove();
-                        }
-                    }
-                }
-            })
-        ]
-    }));
-
-    exitModal.show();
-    exitModal.focus();
+    core.call('exit');
 };
 
 
