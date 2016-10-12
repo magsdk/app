@@ -59,7 +59,7 @@ app.exit = function () {
 
 
 events.load = function ( event ) {
-    window.core = window.parent.getCoreInstanse(window, app);
+    //window.core = window.parent.getCoreInstanse(window, app);
 
     if ( core.ready ) {
         if ( app.events['load'] ) {
