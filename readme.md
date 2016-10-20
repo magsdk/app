@@ -1,9 +1,10 @@
 Application core
 ================
 
-[![Build Status](https://img.shields.io/travis/magsdk/app.svg?style=flat-square)](https://travis-ci.org/magsdk/app)
-[![NPM version](https://img.shields.io/npm/v/mag-app.svg?style=flat-square)](https://www.npmjs.com/package/mag-app)
-[![Dependencies Status](https://img.shields.io/david/magsdk/app.svg?style=flat-square)](https://david-dm.org/magsdk/app)
+[![build status](https://img.shields.io/travis/magsdk/app.svg?style=flat-square)](https://travis-ci.org/magsdk/app)
+[![npm version](https://img.shields.io/npm/v/mag-app.svg?style=flat-square)](https://www.npmjs.com/package/mag-app)
+[![dependencies status](https://img.shields.io/david/magsdk/app.svg?style=flat-square)](https://david-dm.org/magsdk/app)
+[![devDependencies status](https://img.shields.io/david/dev/magsdk/app.svg?style=flat-square)](https://david-dm.org/magsdk/app?type=dev)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/magsdk)
 
 
