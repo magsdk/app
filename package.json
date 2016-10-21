@@ -18,7 +18,7 @@
     },
     "dependencies": {
         "stb-app": "stbsdk/app",
-        "spa-app": "spasdk/app",
+        "spa-app": "1.*.*",
         "stb-keys": "stbsdk/keys"
     },
     "devDependencies": {
