@@ -1,6 +1,6 @@
 {
     "name": "mag-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "MAG SDK application core.",
     "author": {
         "name": "Stanislav Kalashnik",
@@ -18,12 +18,14 @@
     },
     "dependencies": {
         "stb-app": "stbsdk/app",
-        "spa-app": "1.*.*",
-        "stb-keys": "stbsdk/keys"
+        "spa-app": "^1.0.0",
+        "stb-keys": "stbsdk/keys",
+        "stb-shim-bind": "stbsdk/shim-bind",
+        "stb-shim-frame": "stbsdk/shim-frame"
     },
     "devDependencies": {
-        "eslint": "3.*.*",
-        "mag-eslint-config": "1.*.*"
+        "eslint": "^3.0.0",
+        "mag-eslint-config": "^1.0.0"
     },
     "keywords": [
         "mag",
