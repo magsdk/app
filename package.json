@@ -17,7 +17,7 @@
         "jsdoc": "jsdoc --destination doc *.js readme.md"
     },
     "dependencies": {
-        "stb-app": "stbsdk/app",
+        "stb-app": "1.*.*",
         "spa-app": "1.*.*",
         "stb-keys": "1.*.*"
     },
