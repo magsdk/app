@@ -1,6 +1,6 @@
 {
     "name": "mag-app",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "MAG SDK application core.",
     "author": {
         "name": "Stanislav Kalashnik",
