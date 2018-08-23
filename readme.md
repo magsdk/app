@@ -9,7 +9,7 @@ Application core
 
 
 Main module to create MAG Core application.
-Extends SPA [app](https://github.com/spasdk/app) module.
+Extends [spa-app](https://github.com/spasdk/app) and [stb-app](https://github.com/stbsdk/app) modules.
 Adds MAG-specific logic (handle screen resolution, STB events, work inside iframe, etc.).
 
 
@@ -28,11 +28,25 @@ Add the instance to the scope:
 var app = require('mag-app');
 ```
 
-At run-time adds the following attributes:
+To change application state to ready:
 
- Name               | Description
---------------------|-------------
+```js
+app.ready();
+```
 
+To exit from application:
+
+```js
+app.exit();
+```
+
+Get device platform name:
+
+```js
+console.log(app.platform);
+```
+
+More examples and information are available in [spa-app](https://github.com/spasdk/app) and [stb-app](https://github.com/stbsdk/app) modules.
 
 ## Development mode ##
 
