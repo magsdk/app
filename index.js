@@ -7,5 +7,8 @@
 
 var app = require('./lib/main');
 
+app.defaultEvents.contextmenu = function ( event ) {
+    event.preventDefault();
+};
 
 module.exports = app;
