@@ -1,6 +1,6 @@
 {
     "name": "mag-app",
-    "version": "1.0.9",
+    "version": "2.0.0",
     "description": "MAG SDK application core.",
     "author": {
         "name": "Stanislav Kalashnik",
@@ -18,7 +18,7 @@
     },
     "dependencies": {
         "spa-app": "^1.5.2",
-        "stb-app": "^1.5.0",
+        "stb-app": "^2.0.2",
         "stb-keys": "^1.4.4"
     },
     "devDependencies": {
