@@ -18,12 +18,12 @@
     },
     "dependencies": {
         "spa-app": "^1.5.2",
-        "stb-app": "^2.0.2",
+        "stb-app": "^2.0.3",
         "stb-keys": "^1.4.4"
     },
     "devDependencies": {
         "jsdoc": "^3.5.5",
-        "mag-eslint": "^1.0.1"
+        "mag-eslint": "^1.0.2"
     },
     "keywords": [
         "mag",
