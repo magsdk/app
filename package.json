@@ -19,10 +19,7 @@
     "dependencies": {
         "spa-app": "^1.5.2",
         "stb-app": "^2.0.3",
-        "stb-keys": "^1.4.4",
-        "tzn-keys": "^1.0.4",
-        "webos-keys": "^1.0.5",
-        "stv-keys": "^1.0.7"
+        "stb-keys": "^1.4.4"
     },
     "devDependencies": {
         "jsdoc": "^3.5.5",
