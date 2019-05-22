@@ -8,5 +8,8 @@
 // public
 module.exports = {
     // base rules
-    extends: require.resolve('mag-eslint')
+    extends: require.resolve('mag-eslint'),
+    globals: {
+        PLATFORM: false
+    }
 };
