@@ -10,6 +10,7 @@ module.exports = {
     // base rules
     extends: require.resolve('mag-eslint'),
     globals: {
-        PLATFORM: false
+        PLATFORM: false,
+        TARGET: false
     }
 };
